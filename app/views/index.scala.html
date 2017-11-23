@@ -1,0 +1,28 @@
+@( buttonTitle : String )
+
+@main("Hello simple project") {
+<script type="text/javascript">
+      // <![CDATA[
+
+          isc.Button.create({
+             width : 300,
+             position:"relative",
+             title : "@buttonTitle",
+             click : function(){
+                isc.say('Привет от смарта &-)');
+             }
+          });
+
+          isc.Button.create({
+             width : 300,
+             position:"relative",
+             title : "таблица",
+             click : function(){
+                location.assign( "/table" )
+             }
+          });
+
+
+// ]]>
+  </script>
+}

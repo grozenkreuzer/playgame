@@ -1,0 +1,38 @@
+@(title: String)(content: Html)
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html lang="en">
+    <head>
+        <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+        <meta content="" name="description" />
+        <meta content="" name="keywords" />
+
+        <title>@title</title>
+        <link rel="shortcut icon" type="image/png" href="@routes.Assets.versioned("images/favicon.png")">
+
+        <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/others.css")">
+        <script src="@routes.Assets.versioned("javascripts/jquery-1.7.2.min.js")" id="jquery"></script>
+        <script src="@routes.Assets.versioned("javascripts/json2.js")" id="json"></script>
+
+        <script type="text/javascript">
+          // <![CDATA[
+              var isomorphicDir = "/assets/javascripts/isomorphic/";
+          // ]]>
+      </script>
+
+        <script src="@routes.Assets.versioned("javascripts/isomorphic/system/modules/ISC_Core.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.versioned("javascripts/isomorphic/system/modules/ISC_Foundation.js?v=9.0")" type="text/javascript"></script>
+        <script src="@routes.Assets.versioned("javascripts/isomorphic/system/modules/ISC_Containers.js?v=9.0")" type="text/javascript"></script>
+        <script src="@routes.Assets.versioned("javascripts/isomorphic/system/modules/ISC_Grids.js?v=9.0")" type="text/javascript"></script>
+        <script src="@routes.Assets.versioned("javascripts/isomorphic/system/modules/ISC_Forms.js?v=9.0")" type="text/javascript"></script>
+        <script src="@routes.Assets.versioned("javascripts/isomorphic/system/modules/ISC_DataBinding.js?v=9.0")" type="text/javascript"></script>
+        <script src="@routes.Assets.versioned("javascripts/isomorphic/skins/SberBank/load_skin.js")" type="text/javascript"></script>
+        
+
+    </head>
+    <body>
+        @content
+    </body>
+</html>
