@@ -10,31 +10,23 @@ import play.api.mvc._
 
 
 class MainController @Inject
-  (cc: ControllerComponents)
-  extends AbstractController(cc) {
+    (cc: ControllerComponents) extends AbstractController(cc) {
 
-  
+    def index = Action {
+        Ok(views.html.index("Hello friends "))
+    }
 
+    def table = Action {
+        Ok( views.html.table( sc.scriptCDATA( sc.getTetsStructure) )  )
+    }
 
-  def index = Action {
-    Ok(views.html.index("Hello friends "))
-  }
-
-  def table = Action {
-    Ok( views.html.table( sc.scriptCDATA( sc.getTetsStructure) )  )
-  }
-
-  def getTestInfoList = {
-    val ret =
-      List(
-        TestInfo("one"),
-        TestInfo("two"),
-        TestInfo("three")
-      )
-
-    
-    ret
-
-  }
-
+    def getTestInfoList = {
+        val ret =
+            List(
+                TestInfo("one"),
+                TestInfo("two"),
+                TestInfo("three")
+            )
+        ret
+    }
 }

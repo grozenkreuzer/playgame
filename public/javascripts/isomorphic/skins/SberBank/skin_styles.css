@@ -26,7 +26,7 @@
 
 /* drag outline */
 .dragOutline {
-    border:1px dashed #9ec219;
+    border:1px dashed #009999;
 }
 
 /* drop indicator */
@@ -70,12 +70,8 @@
     padding:2px;
     font-weight:bold;
     font-family:Tahoma, Arial, sans-serif; font-size:11px;
-    background:#FFFFFF url(./images/cssButton/button_stretch.png) repeat;
-    border:1px solid #C3C3C3;
-/*	border-radius: 10px;
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -khtml-border-radius: 10px;*/
+    background:#FFFFFF url(./images/cssButton/button_stretch.png) repeat-x;
+    border:1px solid #114A58;
 }
 
 /* focused and selected styling */
@@ -85,18 +81,14 @@
 .buttonFocusedOver,
 .buttonSelectedFocused,
 .buttonSelectedFocusedOver {
-    background:#D68F0B url(./images/cssButton/button_Selected_stretch.png) repeat;
+    background:#D68F0B url(./images/cssButton/button_Selected_stretch.png) repeat-x;
 }
 
-.buttonOver {
-    background:#FFFFFF url(./images/cssButton/button_Over_stretch.png) repeat;
-    border:1px solid #C3C3C3;
-}
-
+.buttonOver,
 .buttonSelectedOver,
 .buttonFocusedOver,
 .buttonSelectedFocusedOver {
-    color:#00673e;
+    color:#114A58;
     border:1px solid #808080;
 }
 
@@ -108,17 +100,17 @@
 
 .buttonSelectedDisabled {
     color:#808080;
-    background:#C0800A url(./images/cssButton/button_Selected_Disabled_stretch.png) repeat;
+    background:#C0800A url(./images/cssButton/button_Selected_Disabled_stretch.png) repeat-x;
 }
 
 .buttonDown {
-    background:#97B3B7 url(./images/cssButton/button_Down_stretch.png) repeat;
+    background:#97B3B7 url(./images/cssButton/button_Down_stretch.png) repeat-x;
 }
 
 .buttonFocusedDown,
 .buttonSelectedDown,
 .buttonFocusedSelectedDown {
-    background:#B67A09 url(./images/cssButton/button_Focused_Down_stretch.png) repeat;
+    background:#B67A09 url(./images/cssButton/button_Focused_Down_stretch.png) repeat-x;
 }
 
 /* ImgButton */
@@ -207,12 +199,12 @@
 }
 .menuOver,
 .menuSelectedOver {
-    background-color:#F6E6B0;
+    background-color:#F6E6B0; 
     border-top:1px solid #F0BE09; border-bottom:1px solid #F0BE09;
 }
 .treeMenuSelected {
-    color:black; background-color:#A9B2CA;
-    border-top:1px solid #A9B2CA; border-bottom:1px solid #A9B2CA;
+    color:black; background-color:#A9B2CA; 
+	border-top:1px solid #A9B2CA; border-bottom:1px solid #A9B2CA;
 }
 .treeMenuSelectedOver {
     color:white; background-color:#0A246A;
@@ -220,7 +212,7 @@
 }
 .menuDisabled {
     color:#777777;
-    border-top:1px transparent; border-bottom:1px transparent;
+    border-top:1px transparent; border-bottom:1px transparent;    
 }
 
 /* menu header buttons */
@@ -236,7 +228,7 @@
     font-weight:bold;
     background-color:#C6D5D8;
     border:1px solid #3A5053;
-    padding-left:4px; padding-right:4px;
+    padding-left:4px; padding-right:4px;    
     background-image: url(./images/ListGrid/header.png);
 }
 .menuButtonOver {
@@ -276,7 +268,6 @@
 
 .windowHeader,
 .dialogHeader {
-    top:0px;
 }
 
 .windowHeaderHilite,
@@ -306,17 +297,17 @@
 ============================================================*/
 
 .layoutDropLine {
-    background-color:#449d2f;
+    background-color:#3366FF;
 
 }
 .layoutPlaceHolder {
     border:1px solid black;
 }
 .splitbar {
-
+	
 }
 .splitbarDown {
-    border:1px solid black;
+	border:1px solid black;
 }
 
 /*============================================================
@@ -356,7 +347,7 @@
 .tabTitleDown,
 .tabTitleSelectedOver,
 .tabTitleSelectedDown {
-    color: #9ec219;
+    color: #00CCCC;
 }
 .tabTitleDisabled,
 .tabTitleSelectedDisabled {
@@ -382,7 +373,7 @@
 .vtabTitleDown,
 .vtabTitleSelectedOver,
 .vtabTitleSelectedDown {
-    color: #9ec219;
+    color: #00CCCC;
 }
 .vtabTitleDisabled,
 .vtabTitleSelectedDisabled{
@@ -418,17 +409,17 @@
     border-left:5px;
 }
 
-.sectionHeaderTitleopened,
+.sectionHeaderTitleopened, 
 .sectionHeaderTitleclosed {
     font-family:Tahoma, Arial, sans-serif; font-size:11px; color:white;
 }
-.sectionHeaderTitleDisabledopened,
+.sectionHeaderTitleDisabledopened, 
 .sectionHeaderTitleDisabledclosed {
     font-family:Tahoma, Arial, sans-serif; font-size:11px; color:#808080;
 }
 
 /* SectionStack headers - css based */
-.sectionHeaderopened,
+.sectionHeaderopened, 
 .sectionHeaderclosed {
     font-family:Tahoma, Arial, sans-serif; font-size:11px; color:white; background-color:#6682A0;
     border-left:1px solid #FFFFFF; border-top:1px solid #FFFFFF;
@@ -492,8 +483,8 @@
     font-family:Tahoma, Arial, sans-serif; font-size:11px;
 }
 .formCellError,
-.formTitleError {
-    font-weight:bold; color:#204268;
+.formTitleError { 
+    font-weight:bold; color:#204268; 
     background-color:#CFD9F2
 }
 .formHint {
@@ -506,7 +497,7 @@
 .headerItemError {
     font-size:14px; font-weight:bold;
     color:#213D42;
-}
+}	
 
 /* text items & selectItem */
 .textItem,
@@ -520,8 +511,8 @@
 .selectItemTextError,
 .selectItemTextFocused,
 .selectItemTextDisabled,
-.selectItemTextHint {
-    padding:2px; border:1px solid #00673e;
+.selectItemTextHint { 
+    padding:2px; border:1px solid #114A58;
     background:#FFFFFF url(./images/shared/shadow.gif) repeat-x scroll;
 }
 
@@ -540,7 +531,7 @@
 
 
 .comboBoxItemPendingText {
-    color:#00673e;
+    color:#0066CC;
 }
 
 /* selectItem */
@@ -574,7 +565,7 @@
 .labelAnchor,
 .labelAnchorDisabled,
 .labelAnchorError,
-.labelAnchorFocused  {
+.labelAnchorFocused  { 
     color:black; text-decoration:none;
 }
 
@@ -594,7 +585,7 @@
 .bracketBorders {
     border-left: 1px solid #119B3B;
     border-top: 1px solid #119B3B;
-    border-bottom: 1px solid #119B3B;
+    border-bottom: 1px solid #119B3B;    
 }
 
 /* DateChooser */
@@ -706,7 +697,7 @@
 .dateChooserNavButtonSelected,
 .dateChooserNavButtonSelectedOver,
 .dateChooserNavButtonSelectedDown {
-    background-color:#EAB309;
+    background-color:#EAB309;  
 }
 
 .dateChooserWeekday,
@@ -728,25 +719,25 @@
 }
 .dateChooserWeekdayDark,
 .dateChooserWeekdayOverDark {
-    background-color:#FCF2CE;
+    background-color:#FCF2CE;  
 }
 .dateChooserWeekdayDarkDisabled {
-    color:#999999; background-color:#FCF2CE;
+    color:#999999; background-color:#FCF2CE;  
 }
 
 .dateChooserWeekend,
 .dateChooserWeekendOver {
-    background-color:#F0FBFC;
+    background-color:#F0FBFC;  
 }
 .dateChooserWeekendDisabled {
-    color:#999999; background-color:#F0FBFC;
+    color:#999999; background-color:#F0FBFC;  
 }
 .dateChooserWeekendDark,
 .dateChooserWeekendOverDark {
-    background-color:#F0EFCB;
+    background-color:#F0EFCB;  
 }
 .dateChooserWeekendDarkDisabled {
-    color:#999999; background-color:#F0EFCB;
+    color:#999999; background-color:#F0EFCB;  
 }
 
 .dateChooserWeekdayDown,
@@ -765,7 +756,7 @@
 .dateChooserWeekendDarkSelected,
 .dateChooserWeekendDarkSelectedOver,
 .dateChooserWeekendDarkSelectedDown {
-    background-color:#EAB309;
+    background-color:#EAB309;  
     border-left:1px solid #CCCCCC;
 }
 
@@ -864,7 +855,7 @@
     font-family:Tahoma, Arial, sans-serif; font-size:11px; padding:10px;
 }
 .gridDragTracker {
-    font-family:Tahoma, Arial, sans-serif; font-size:11px;
+	font-family:Tahoma, Arial, sans-serif; font-size:11px;
     background-color:white;
     padding:1px;
     border:1px dotted #119B3B;
@@ -969,17 +960,17 @@
 .specialColSelectedOver,
 .specialColDisabled,
 .groupNode {
-    font-family:Tahoma, Arial, sans-serif; font-size:11px; text-overflow:ellipsis;
-    color:#333333;
-    border-top:1px solid #ffffff;
-    border-bottom:1px solid #ffffff;
-    background-color:#ffffff;
+	font-family:Tahoma, Arial, sans-serif; font-size:11px; text-overflow:ellipsis;
+	color:#333333;
+	border-top:1px solid #ffffff;
+	border-bottom:1px solid #ffffff;
+	background-color:#ffffff;
 }
 
 .specialCol {
-    border-top:1px solid #EFF1F1;
-    border-bottom:1px solid #EFF1F1;
-    background-color:#EFF1F1;
+	border-top:1px solid #EFF1F1;
+	border-bottom:1px solid #EFF1F1;
+	background-color:#EFF1F1;
 }
 
 .cellDark,
@@ -987,19 +978,19 @@
 .gridSummaryCellDisabled,
 .recordSummaryCell,
 .recordSummaryCellDark {
-    border-top:1px solid #EFF1F1;
-    border-bottom:1px solid #EFF1F1;
-    background-color:#EFF1F1;
+	border-top:1px solid #EFF1F1;
+	border-bottom:1px solid #EFF1F1;
+	background-color:#EFF1F1;
 }
 
 .cellOver,
-.cellOverDark,
+.cellOverDark,	
 .specialColOver,
 .recordSummaryCellOver,
 .recordSummaryCellOverDark {
-    border-top:1px solid #D9F7F7;
-    border-bottom:1px solid #D9F7F7;
-    background-color:#D9F7F7;
+	border-top:1px solid #D9F7F7;
+	border-bottom:1px solid #D9F7F7;
+	background-color:#D9F7F7;
 }
 
 .cellSelected,
@@ -1007,9 +998,9 @@
 .specialColSelected,
 .recordSummaryCellSelected,
 .recordSummaryCellSelectedDark {
-    border-top:1px solid #FAEBB5;
-    border-bottom:1px solid #FAEBB5;
-    background-color:#FAEBB5;
+	border-top:1px solid #FAEBB5;
+	border-bottom:1px solid #FAEBB5;
+	background-color:#FAEBB5;
 }
 
 .cellSelectedOver,
@@ -1017,9 +1008,9 @@
 .specialColSelectedOver,
 .recordSummaryCellSelectedOver,
 .recordSummaryCellSelectedOverDark {
-    border-top:1px solid #F8E290;
-    border-bottom:1px solid #F8E290;
-    background-color:#F8E290;
+	border-top:1px solid #F8E290;
+	border-bottom:1px solid #F8E290;
+	background-color:#F8E290;
 }
 
 .cellDisabled,
@@ -1028,10 +1019,10 @@
 .gridSummaryCellDisabled,
 .recordSummaryCellDisabled,
 .recordSummaryCellDisabledDark {
-    color:#999999;
-    border-top:1px solid #F6F5DA;
-    border-bottom:1px solid #F6F5DA;
-    background-color:#F6F5DA;
+	color:#999999;
+	border-top:1px solid #F6F5DA;
+	border-bottom:1px solid #F6F5DA; 
+	background-color:#F6F5DA;
 }
 
 .gridSummaryCell,
@@ -1042,15 +1033,15 @@
 /* for grouping */
 .groupNode {
     font-weight:bold;
-    background-color:#ffffff;
-    border-top:1px solid #ffffff;
+	background-color:#ffffff;
+	border-top:1px solid #ffffff;
     border-bottom: 1px solid #808080;
 }
 
 /* Field builders (Formula/Summary) */
 .sampleOutput {
     border: 2px solid #D9D9D9;
-    padding: 3px;
+    padding: 3px; 
 }
 
 /* Multi-sort - sort-index appearing next to sort-arrows in field headers */
@@ -1064,7 +1055,7 @@
 .toolStrip {
     border-left:1px solid #808080;
     border-right:1px solid #808080;
-    background:#EFF1F1;
+	background:#EFF1F1;
 }
 
 /*============================================================
@@ -1100,9 +1091,9 @@
     -moz-border-radius: 2px;
     -khtml-border-radius: 2px;
     -webkit-border-radius: 2px;
-    color: #00673e;
-    font-family: Tahoma, Arial, sans-serif;
-    font-size: 11px;
+    color: #114a58;
+    font-family: Tahoma, Arial, sans-serif; 
+    font-size: 11px; 
     font-weight: bold;
     padding: 3px;
 }
@@ -1127,8 +1118,8 @@
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
     -khtml-border-radius: 3px;
-    color:#333333;
-    font-family: Tahoma, Arial, sans-serif;
+	color:#333333;
+    font-family: Tahoma, Arial, sans-serif; 
     font-size:11px;
     padding: 4px;
 }
@@ -1139,7 +1130,7 @@
 .iconButtonSelectedFocusedOver {
     background: #f6e6b0;
     border: 1px solid #F0BE09;
-    color: #00673e;
+    color: #114A58;
 }
 
 .iconButtonSelected,
@@ -1160,7 +1151,7 @@
 ============================================================*/
 
 .resizeThumb {
-    background-color:#9ec219;
+    background-color:#009999;
 }
 
 /*============================================================
@@ -1169,7 +1160,7 @@
 
 .tileGrid {
     border:1px solid #808080;
-
+    
 }
 .tileValue,
 .tileValueDown,
@@ -1177,12 +1168,12 @@
 .tileValueOver,
 .tileValueSelectedOver,
 .tileValueSelectedDown {
-    font-size: 8pt;
-    text-overflow:ellipsis;
+    font-size: 8pt; 
+    text-overflow:ellipsis;   
 }
 
 .tileValueOver {
-    color:green;
+    color:green;    
 }
 
 .tileValueSelected {
@@ -1190,35 +1181,35 @@
 }
 
 .tileValueSelectedOver {
-    color: #685406
+   color: #685406 
 }
 
-.simpleTile,
+.simpleTile, 
 .simpleTileOver,
 .simpleTileSelected,
 .simpleTileSelectedOver {
     font-size: 8pt;
-    padding:3px
+    padding:3px    
 }
 
 .simpleTile {
     border:1px solid transparent;
-
+    
 }
 .simpleTileOver {
-    background-color:#D9F7F7;
-    border:1px solid #9AE9EA;
-    padding:3px;
+      background-color:#D9F7F7;
+      border:1px solid #9AE9EA;
+      padding:3px;
 }
 
 .simpleTileSelected {
-    background-color:#FAEBB5;
-    border:1px solid #F0C220;
+      background-color:#FAEBB5;
+      border:1px solid #F0C220;    
 }
 
 .simpleTileSelectedOver {
-    background-color:#F8E290;
-    border:1px solid #D5AD0D;
+      background-color:#F8E290;
+      border:1px solid #D5AD0D;
 }
 
 .selectedText {
@@ -1268,21 +1259,21 @@
 .tabButtonLeftOver,
 .tabButtonLeftSelected,
 .tabButtonLeftSelectedOver {
-    font-family:Tahoma, Arial, sans-serif; font-size:11px; background-color:#D6D6D6;
+    font-family:Tahoma, Arial, sans-serif; font-size:11px; background-color:#D6D6D6; 
     border-left:1px solid white; border-top:1px solid white; border-bottom:1px solid #808080;
 }
 .tabButtonLeftDown,
 .tabButtonLeftSelectedDown {
-    font-family:Tahoma, Arial, sans-serif font-size:11px; background-color: #D6D6D6;
+    font-family:Tahoma, Arial, sans-serif font-size:11px; background-color: #D6D6D6; 
     border-left:1px solid #808080; border-top:1px solid #808080; border-bottom:1px solid white;
 }
 .tabButtonLeftSelectedDisabled,
 .tabButtonLeftDisabled {
     font-family:Tahoma, Arial, sans-serif; font-size:11px; color:#666666;
-    background-color:#CCCCCC;
+    background-color:#CCCCCC; 
     border-left:1px solid #CCCCCC; border-top:1px solid #CCCCCC; border-bottom:1px solid #CCCCCC;
 }
-/* right */
+/* right */                        
 .tabButtonRight {
     font-family:Tahoma, Arial, sans-serif; font-size:11px; background-color:#CCCCCC;
     border-top:1px solid white; border-bottom:1px solid #808080; border-right:1px solid #808080;
@@ -1290,23 +1281,23 @@
 .tabButtonRightOver,
 .tabButtonRightSelected,
 .tabButtonRightSelectedOver {
-    font-family:Tahoma, Arial, sans-serif; font-size:11px; background-color:#D6D6D6;
+    font-family:Tahoma, Arial, sans-serif; font-size:11px; background-color:#D6D6D6; 
     border-top:1px solid white; border-bottom:1px solid #808080; border-right:1px solid #808080;
 }
 .tabButtonRightDown,
 .tabButtonRightSelectedDown {
-    font-family:Tahoma, Arial, sans-serif; font-size:11px; background-color: #D6D6D6;
+    font-family:Tahoma, Arial, sans-serif; font-size:11px; background-color: #D6D6D6; 
     border-top:1px solid #808080; border-bottom:1px solid white; border-right:1px solid white;
 }
 
 .tabButtonRightSelectedDisabled,
 .tabButtonRightDisabled {
     font-family:Tahoma, Arial, sans-serif; font-size:11px; color:#666666;
-    background-color:#CCCCCC;
+    background-color:#CCCCCC; 
     border-top:1px solid #CCCCCC; border-bottom:1px solid #CCCCCC; border-right:1px solid #CCCCCC;
 }
 
-/* top */
+/* top */                        
 .tabButtonTop {
     font-family:Tahoma, Arial, sans-serif; font-size:11px; background-color:#CCCCCC;
     border-left:1px solid white; border-top:1px solid white; border-right:1px solid #808080;
@@ -1314,22 +1305,22 @@
 .tabButtonTopOver,
 .tabButtonTopSelected,
 .tabButtonTopSelectedOver {
-    font-family:Tahoma, Arial, sans-serif; font-size:11px; background-color:#D6D6D6;
+    font-family:Tahoma, Arial, sans-serif; font-size:11px; background-color:#D6D6D6; 
     border-left:1px solid white; border-top:1px solid white; border-right:1px solid #808080;
 }
 .tabButtonTopDown,
 .tabButtonTopSelectedDown {
-    font-family:Tahoma, Arial, sans-serif; font-size:11px; background-color: #D6D6D6;
+    font-family:Tahoma, Arial, sans-serif; font-size:11px; background-color: #D6D6D6; 
     border-left:1px solid #808080; border-top:1px solid #808080; border-right:1px solid white;
 }
 .tabButtonTopSelectedDisabled,
 .tabButtonTopDisabled {
-    font-family:Tahoma, Arial, sans-serif; font-size:11px; color:#666666;
-    background-color:#CCCCCC;
+    font-family:Tahoma, Arial, sans-serif; font-size:11px; color:#666666; 
+    background-color:#CCCCCC; 
     border-left:1px solid #CCCCCC; border-top:1px solid #CCCCCC; border-right:1px solid #CCCCCC;
 }
 
-/* bottom */
+/* bottom */                        
 .tabButtonBottom {
     font-family:Tahoma, Arial, sans-serif; font-size:11px; background-color:#CCCCCC;
     border-left:1px solid white; border-bottom:1px solid #808080; border-right:1px solid #808080;
@@ -1337,18 +1328,18 @@
 .tabButtonBottomOver,
 .tabButtonBottomSelected,
 .tabButtonBottomSelectedOver {
-    font-family:Tahoma, Arial, sans-serif; font-size:11px; background-color:#D6D6D6;
+    font-family:Tahoma, Arial, sans-serif; font-size:11px; background-color:#D6D6D6; 
     border-left:1px solid white; border-bottom:1px solid #808080; border-right:1px solid #808080;
 }
 .tabButtonBottomDown,
 .tabButtonBottomSelectedDown {
-    font-family:Tahoma, Arial, sans-serif; font-size:11px; background-color: #D6D6D6;
+    font-family:Tahoma, Arial, sans-serif; font-size:11px; background-color: #D6D6D6; 
     border-left:1px solid #808080; border-bottom:1px solid white; border-right:1px solid white;
 }
 .tabButtonBottomSelectedDisabled,
 .tabButtonBottomDisabled {
     font-family:Tahoma, Arial, sans-serif; font-size:11px; color:#666666;
-    background-color:#CCCCCC;
+    background-color:#CCCCCC; 
     border-left:1px solid #CCCCCC; border-bottom:1px solid #CCCCCC; border-right:1px solid #CCCCCC;
 }
 
@@ -1360,40 +1351,40 @@
 .cubeCell {
     font-family:Tahoma, Arial, sans-serif; font-size:11px; color:black; text-overflow:ellipsis;
     background-color:#FFFFFF;
-    border-top:1px solid white; border-bottom:1px solid #AAAAAA;
+    border-top:1px solid white; border-bottom:1px solid #AAAAAA; 
     border-left:1px solid white; border-right:1px solid #AAAAAA;
 }
 
 .cubeCellDark {
     font-family:Tahoma, Arial, sans-serif; font-size:11px; color:black; text-overflow:ellipsis;
     background-color:#EEEEEE;
-    border-top:1px solid #EEEEEE; border-bottom:1px solid #AAAAAA;
+    border-top:1px solid #EEEEEE; border-bottom:1px solid #AAAAAA; 
     border-left:1px solid #EEEEEE; border-right:1px solid #AAAAAA;
 }
 
 .cubeCellDisabled {
     font-family:Tahoma, Arial, sans-serif; font-size:11px; color:#666666; text-overflow:ellipsis;
-    background-color:#FFFFFF;
-    border-top:1px solid #FFFFFF; border-bottom:1px solid #FFFFFF;
+    background-color:#FFFFFF; 
+    border-top:1px solid #FFFFFF; border-bottom:1px solid #FFFFFF; 
     border-left:1px solid #FFFFFF; border-right:1px solid #FFFFFF;
 }
 
-/* partial styles */
+/* partial styles */ 
 .cubeCellOver {
     background-color:#B8D1EE;
-    border-top:1px solid #B8D1EE; border-bottom:1px solid #AAAAAA;
+    border-top:1px solid #B8D1EE; border-bottom:1px solid #AAAAAA; 
     border-left:1px solid #B8D1EE; border-right:1px solid #AAAAAA;
 }
 
 .cubeCellSelected {
     background-color:#FFE781;
-    border-top:1px solid #FFE781; border-bottom:1px solid #AAAAAA;
+    border-top:1px solid #FFE781; border-bottom:1px solid #AAAAAA; 
     border-left:1px solid #FFE781; border-right:1px solid #AAAAAA;
 }
 
 .cubeCellSelectedOver {
     background-color:#B8D1EE;
-    border-top:1px solid #B8D1EE; border-bottom:1px solid #AAAAAA;
+    border-top:1px solid #B8D1EE; border-bottom:1px solid #AAAAAA; 
     border-left:1px solid #B8D1EE; border-right:1px solid #AAAAAA;
 }
 
@@ -1432,15 +1423,15 @@
     border-left:1px solid #00008B; border-top:1px solid #00008B;
     border-right:1px solid #F0F8FF; border-bottom:1px solid #F0F8FF;
     background-image:url("images/CubeGrid/rowHeaderSelected.gif");
-
+    
 }
 .rowHeaderSelectedOver {
     font-family:Tahoma, Arial, sans-serif; font-size:11px; color:white;
     background-color:#3E74B3;
-    border-top:1px solid white; border-bottom:1px solid white;
+    border-top:1px solid white; border-bottom:1px solid white; 
     border-left:1px solid white; border-right:1px solid white;
     background-image:url("images/CubeGrid/rowHeaderSelectedOver.gif");
-}
+}						
 .rowHeaderSelectedDisabled {
     font-family:Tahoma, Arial, sans-serif; font-size:11px; color:#808080;
     background-color:#3E74B3;
@@ -1487,17 +1478,17 @@
 .rowHeaderLabelSelectedOver {
     font-family:Tahoma, Arial, sans-serif; font-size:11px; font-weight:bold; color:white;
     background-color:#3E74B3;
-    border-top:1px solid white; border-bottom:1px solid white;
+    border-top:1px solid white; border-bottom:1px solid white; 
     border-left:1px solid white; border-right:1px solid white;
     background-image:url("images/CubeGrid/rowHeaderDown.gif");
-}
+}						
 .rowHeaderLabelSelectedDisabled	{
     font-family:Tahoma, Arial, sans-serif; font-size:11px; font-weight:bold; color:#808080;
     background-color:#7D7D7D;
     border-left:1px solid #808080; border-top:1px solid #808080;
     border-right:1px solid #808080; border-bottom:1px solid #808080;
 }
-
+						
 /* column headers */
 .colHeader {
     font-family:Tahoma, Arial, sans-serif; font-size:11px; color:white;
@@ -1537,10 +1528,10 @@
 .colHeaderSelectedOver {
     font-family:Tahoma, Arial, sans-serif; font-size:11px; font-weight:bold; color:white;
     background-color:#3E74B3;
-    border-top:1px solid white; border-bottom:1px solid white;
+    border-top:1px solid white; border-bottom:1px solid white; 
     border-left:1px solid white; border-right:1px solid white;
     background-image:url("images/CubeGrid/colHeaderSelectedOver.gif");
-}
+}						
 .colHeaderSelectedDisabled {
     font-family:Tahoma, Arial, sans-serif; font-size:11px; font-weight:bold; color:#808080;
     background-color:#3E74B3;
@@ -1581,10 +1572,10 @@
 .colHeaderLabelSelectedOver {
     font-family:Tahoma, Arial, sans-serif; font-size:11px; font-weight:bold; color:white;
     background-color:#3E74B3;
-    border-top:1px solid white; border-bottom:1px solid white;
+    border-top:1px solid white; border-bottom:1px solid white; 
     border-right:1px solid #555555; border-bottom:1px solid #555555;
     background-image:url("images/CubeGrid/colHeaderDown.gif");
-}
+}						
 .colHeaderLabelSelectedDisabled {
     font-family:Tahoma, Arial, sans-serif; font-size:11px; font-weight:bold; color:#808080;
     background-color:#7D7D7D;
@@ -1631,10 +1622,10 @@
 .innerHeaderSelectedOver {
     font-family:Tahoma, Arial, sans-serif; font-size:11px; font-weight:bold; color:white;
     background-color:#3E74B3;
-    border-top:1px solid white; border-bottom:1px solid white;
+    border-top:1px solid white; border-bottom:1px solid white; 
     border-left:1px solid white; border-right:1px solid white;
     background-image:url("images/CubeGrid/innerHeaderSelectedOver.gif");
-}
+}						
 .innerHeaderSelectedDisabled {
     font-family:Tahoma, Arial, sans-serif; font-size:11px; color:#808080;
     background-color:#CCCCCC;
@@ -1646,7 +1637,7 @@
 	BarChart
 ============================================================*/
 
-.chart {
+.chart { 
     background-color:#CCCCCC;
 }
 .chartTitle {
@@ -1669,7 +1660,7 @@
 }
 .chartTotal {
     color:black;
-    font-family:Tahoma, Arial, sans-serif;
+    font-family:Tahoma, Arial, sans-serif; 
     font-size:12px;
     background-color:linen;
 }
@@ -1678,7 +1669,7 @@
     border-top:1px dashed blue;
     border-right:1px solid black;
     background-color:#DDDDDD
-}
+}   
 .chartBar1 {
     background-color:red;
     filter:"progid:dximagetransform.microsoft.gradient(gradientType=1, startColorStr=#990000, endColorStr=#FF0000)";
@@ -1697,7 +1688,7 @@
 ============================================================*/
 
 .printHeader {
-    font-family:Tahoma, Arial, sans-serif; font-size:11px;
+    font-family:Tahoma, Arial, sans-serif; font-size:11px;    
     border:1px solid black;
     font-weight:bold;
 }
@@ -1720,11 +1711,11 @@
 .calendarWorkdayDisabled,
 .calendarDark,
 .calendarDisabled {
-    background-color:gainsboro;
+    background-color:gainsboro;    
 }
 
 .calendarWorkday {
-    background-color:#f2f2f2;
+    background-color:#f2f2f2; 
 }
 
 .calendarOver,
@@ -1738,7 +1729,7 @@
     font-family:Tahoma, Arial, sans-serif; font-size:11px;
     color:black;
     border-bottom:1px solid #a0a0a0; border-right:1px solid #a0a0a0;
-    background-color:#CCCCCC;
+    background-color:#CCCCCC; 
 }
 .labelColumn {
     font-family:Tahoma, Arial, sans-serif; font-size:11px;
@@ -1801,8 +1792,8 @@
     background-color: #c0ffc0;
 }
 .calMonthOtherDayBody,
-.calMonthOtherDayBodyDark,
-.calMonthOtherDayBodyDisabled,
+.calMonthOtherDayBodyDark, 
+.calMonthOtherDayBodyDisabled, 
 .calMonthOtherDayBodyDisabledOver{
     font-family:Tahoma, Arial, sans-serif; font-size:11px;
     color:black;
@@ -1819,7 +1810,7 @@
 
 /* calMonthOtherDayBlank */
 .calMonthOtherDayBlank,
-.calMonthOtherDayBlankDark,
+.calMonthOtherDayBlankDark, 
 .calMonthOtherDayBlankOver,
 .calMonthOtherDayBlankOverDark {
     font-family:Tahoma, Arial, sans-serif; font-size:11px;
@@ -1837,24 +1828,24 @@ a.calMonthEventLink:active {color:blue; text-decoration:none}
 /* ----event window---- */
 
 .eventWindow {
-    font-size:9px;
-    background-color:#649ED8;
-    border: 1px solid #004D99;
-
+   font-size:9px;
+   background-color:#649ED8;
+   border: 1px solid #004D99;
+   
 }
 
 .eventWindowHeader {
     font-family:Tahoma, Arial, sans-serif; font-size:9px;
     background-color:#004D99;
     color: white;
-
+  
 }
 
 .eventWindowBody {
     font-family:Tahoma, Arial, sans-serif; font-size: 9px;
     background-color: #649ED8;
     padding: 3px;
-
+    
 }
 
 .eventWindowResizer {
@@ -1889,8 +1880,8 @@ a.calMonthEventLink:active {color:blue; text-decoration:none}
 }
 .propSheetTitleError,
 .propSheetValueError {
-    font-family:Tahoma, Arial, sans-serif;
-    font-size:11px; color:#204268;
+    font-family:Tahoma, Arial, sans-serif; 
+    font-size:11px; color:#204268; 
     background-color:#CFD9F2
 }
 .propSheetField,

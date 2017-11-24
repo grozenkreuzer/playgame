@@ -14,7 +14,7 @@ with (theWindow) {
 // Specify skin directory
 //----------------------------------------
     // must be relative to your application file or isomorphicDir
-    isc.Page.setSkinDir("[ISOMORPHIC]/skins/SberBank/")
+    isc.Page.setSkinDir("[ISOMORPHIC]/skins/TreeFrog/")
 
 
 //----------------------------------------
@@ -115,7 +115,7 @@ with (theWindow) {
         width:100,
         capSize:7,
         vertical:false,
-        // SberBank button media looks best when 25px tall with 
+        // TreeFrog button media looks best when 25px tall with 
         // title text floating just below the top of the button 
         valign:"top",
         labelVPad:4,
@@ -447,8 +447,8 @@ with (theWindow) {
     // default picker properties don't work well with ColorPicker because it is based on a 
     // Window rather than a Canvas, and so already has its own decorations.
     //
-    // The result was particularly bad in SberBank because the backgroundColor setting was 
-    // breaking SberBank's curved corners and wiping out the separate header bar
+    // The result was particularly bad in TreeFrog because the backgroundColor setting was 
+    // breaking TreeFrog's curved corners and wiping out the separate header bar
 
 
     if (isc.DateChooser) {
@@ -822,7 +822,7 @@ with (theWindow) {
 
 
     // remember the current skin so we can detect multiple skins being loaded
-    if (isc.setCurrentSkin) isc.setCurrentSkin("SberBank");
+    if (isc.setCurrentSkin) isc.setCurrentSkin("TreeFrog");
     
     // specify where the browser should redirect if not supported
     isc.Page.checkBrowserAndRedirect("[SKIN]/unsupported_browser.html");
