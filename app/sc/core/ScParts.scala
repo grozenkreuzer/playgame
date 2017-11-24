@@ -20,6 +20,14 @@ trait ScParts[EndType]{
 
   def addNoStr( name : String, value : String ) : EndType = add( name, value, false )
 
+  def addNonEmpty ( name : String, values : List[Any], isString : Boolean = false ) : EndType = {
+
+      if( values.nonEmpty )
+          add( name, values, isString )
+
+      this
+  }
+
   def add( name : String, values : List[Any], isString : Boolean = false ) : EndType = {
 
        val prop =
@@ -32,7 +40,7 @@ trait ScParts[EndType]{
             } else values.map( _2space + _).mkString( _newLine , "," + _newLine, _newLine  )
 
 
-      add(  noStrProp( name, toArray( prop ) ) )
+      add( noStrProp( name, toArray( prop ) ) )
       
   }
 
@@ -43,9 +51,12 @@ trait ScParts[EndType]{
 
   def add( str : String ) : EndType = { addPart(  str ); self }
 
-  //def +( morePart : ScParts[T] ) : String = toString + "\n" + morePart.toString
+  def printBefore : Boolean = true
 
-  def before( part : String ) =  beforeScript.append( part )
+  def before( innerElements : List[ScParts[_]] ):Unit =
+      innerElements.foreach( el => before( el.beforeScript.mkString ))
+
+  def before( part : String ):Unit =  beforeScript.append( part )
 
   private def toArray( in : String  )  = "[ " + in + _space + "]"
 
@@ -78,7 +89,7 @@ trait ScParts[EndType]{
   override def toString : String = {
 
       val beforeStr =
-        if( beforeScript.isEmpty ) ""
+        if( !printBefore || beforeScript.isEmpty ) ""
         else  beforeScript.mkString //(/*"\n", "\n", "\n"*/)
 
         beforeStr +

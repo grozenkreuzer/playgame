@@ -4,22 +4,26 @@ trait LayOutTrait[T] extends ScObjectWithId[T] {
 
     sel : T =>
 
-    val scClassName = ( if( isVertical ) "V" else "H" ) + "Layout"
+    def isVertical : Boolean
 
-    val isVertical : Boolean
-    val members : List[ScObjectWithId[_]]
+    val scClassName = ( if( isVertical  ) "V" else "H" ) + "Layout"
+
+    def members : List[ScObjectWithId[_]]
 
     def relativePosition = { add( "position", "relative" ) }
 
-    add( "members", members )
+    def defaultLayoutAlign( align : String ) = add("defaultLayoutAlign", align)
+
+    addNonEmpty( "members", members )
 
 }
 
 case class HLayOut( id : String, members : List[ScObjectWithId[_]] ) extends LayOutTrait[HLayOut] {
-    val isVertical = false
+    def isVertical = false
 }
 
 case class VLayOut( id : String, members : List[ScObjectWithId[_]] ) extends LayOutTrait[VLayOut] {
-    val isVertical = true
+    def isVertical = true
 }
+
 

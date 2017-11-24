@@ -1,6 +1,6 @@
 package sc.core
 
-import sc.FieldType.FieldType
+import sc.core.StaticObjects.FieldType.FieldType
 
 case class DataSourceField( name : String, typeName : FieldType  ) extends ScNameTypeTrait[DataSourceField] {
 

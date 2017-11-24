@@ -1,16 +1,24 @@
 package sc.core
 
-import sc.FieldType.FieldType
+import sc.core.StaticObjects.FieldType.FieldType
 
 
-trait ScNameTypeTrait[T <: ScNameTypeTrait[T] ] extends ScParts[T] {
+trait ScNameTypeTrait[T <: ScNameTypeTrait[T] ] extends ScNamedTrait[T] {
 
-  self : T =>
+    self : T =>
 
-  val name : String
-  val typeName : FieldType
+    val typeName : FieldType
 
-  add( "name", name.toUpperCase)
-  add( "type", typeName.toString )
+    add( "type", typeName.toString )
+
+}
+
+trait ScNamedTrait[T <: ScNamedTrait[T] ] extends ScParts[T] {
+
+    self : T =>
+
+    val name : String
+
+    add( "name", name.toUpperCase)
 
 }
