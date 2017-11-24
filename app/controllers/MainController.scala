@@ -17,7 +17,7 @@ class MainController @Inject
 
 
   def index = Action {
-    Ok(views.html.index("Хелоу ворлд"))
+    Ok(views.html.index("Hello friends "))
   }
 
   def table = Action {
