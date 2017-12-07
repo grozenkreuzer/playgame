@@ -17,6 +17,11 @@ trait ScNamedTrait[T <: ScNamedTrait[T] ] extends ScParts[T] {
 
     self : T =>
 
+    /********** init   ******************************/
+    def startString = "{"
+
+    def endString: String = "}"
+
     val name : String
 
     add( "name", name.toUpperCase)

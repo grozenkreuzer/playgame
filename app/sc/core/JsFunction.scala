@@ -1,18 +1,25 @@
 package sc.core
 
-case class JsFunctionNamed( name : String, body :String, parameters : List[String] = Nil ) extends JsFunction
+case class JsFunctionNamed[T <: ScParts[T]](owner : T, name : String, parameters : List[String] = Nil ) extends JsFunction[T]
 
-case class JsFunctionProp( body :String, parameters : List[String] = Nil ) extends JsFunction { val name = "" }
+case class JsFunctionProp[T <: ScParts[T]](owner : T, parameters : List[String] = Nil ) extends JsFunction[T] { val name = "" }
 
-trait JsFunction {
+trait JsFunction[T <: ScParts[T]] {
 
-  val body : String
+  val owner : T
+
+  def apply( funcBody : String ) = handler( funcBody )
+
+  def handler( funcBody : String ) = {
+      owner.addNoStr( name, getFullString( funcBody ) )
+      owner
+  }
 
   val parameters : List[String]
 
   val name : String
 
-  override def toString() : String =
+  def getFullString( body : String ) : String =
     if( name.isEmpty )
       s"""function(${parameters.mkString( "," )}){
          |     $body
