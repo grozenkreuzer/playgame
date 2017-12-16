@@ -20,12 +20,7 @@ trait JsFunction[T <: ScParts[T]] {
   val name : String
 
   def getFullString( body : String ) : String =
-    if( name.isEmpty )
       s"""function(${parameters.mkString( "," )}){
-         |     $body
-         |}""".stripMargin
-    else
-      s"""function $name(${parameters.mkString( "," )}){
          |     $body
          |}""".stripMargin
 }

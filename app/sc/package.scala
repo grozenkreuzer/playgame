@@ -24,8 +24,7 @@ package object sc {
 
     def ResponseForGet(startRow: Int, endRow: Int, fetchedRows: Int, data: String) = {
         val totalRows = if ((endRow - startRow) <= fetchedRows) endRow + 2 else startRow + fetchedRows
-        val r = "<response><status>0</status><startRow>" + startRow.toString + "</startRow><endRow>" + (startRow + fetchedRows - 1).toString + "</endRow><totalRows>" + totalRows.toString + "</totalRows><data>" + data.mkString + "</data></response>"
-        r
+        "<response><status>0</status><startRow>" + startRow.toString + "</startRow><endRow>" + (startRow + fetchedRows - 1).toString + "</endRow><totalRows>" + totalRows.toString + "</totalRows><data>" + data.mkString + "</data></response>"
     }
 
     def getResponse( startRow : Int, endRow : Int, dataSourceId : String, componentId : String ) = {

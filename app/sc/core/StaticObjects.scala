@@ -14,6 +14,28 @@ object StaticObjects {
 
         val button      = Value("button")
         val select      = Value("select")
+        val header      = Value("header")
+        val spacer      = Value("spacer")
+        val textArea    = Value("textArea")
+
+    }
+
+    object TitleOrientation extends Enumeration{
+        type TitleOrientation = Value
+
+        val left        = Value("left")
+        val right       = Value("right")
+        val top         = Value("top")
+    }
+
+    object Align extends Enumeration{
+        type Align = Value
+
+        val center      = Value("center")
+        val left        = Value("left")
+        val right       = Value("right")
+        val top         = Value("top")
+        val bottom      = Value( "bottom" )
 
     }
 

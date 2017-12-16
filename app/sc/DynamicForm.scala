@@ -1,6 +1,7 @@
 package sc
 
 import sc.core.StaticObjects.FormItemType.FormItemType
+import sc.core.StaticObjects.TitleOrientation.TitleOrientation
 import sc.core.{JsFunctionNamed, ScNamedTrait, ScObjectWithId}
 
 case class DynamicForm( id : String, fields: List[FormItem] ) extends ScObjectWithId[DynamicForm]  {
@@ -28,6 +29,10 @@ case class DynamicForm( id : String, fields: List[FormItem] ) extends ScObjectWi
 
     def numCols( size : Int ) = addNoStr( "numCols", size )
 
+    def colWidths( sizeList : List[Int] ) = add("colWidths", sizeList)
+
+    def titleOrientation( or : TitleOrientation ) = add("titleOrientation", or.toString)
+
 }
 
 
@@ -49,9 +54,11 @@ case class FormItem( name : String, title: String ) extends ScNamedTrait[FormIte
 
     def rowSpan( colNum : Int ) = addNoStr( "rowSpan", colNum )
 
-    def defaultToFirstOption = add( "defaultToFirstOption ", "true" )
+    def defaultToFirstOption = add( "defaultToFirstOption", "true" )
 
-    def defaultToFirstOption( yes : Boolean ) = add( "defaultToFirstOption ", yes.toString )
+    def defaultToFirstOption( yes : Boolean ) = add( "defaultToFirstOption", yes.toString )
+
+    def showTitle( yes : Boolean ) = addNoStr( "showTitle", yes.toString )
 
     def defaultValue( in : Any ) = addNoStr( "defaultValue", in )
 
@@ -72,6 +79,19 @@ case class FormItem( name : String, title: String ) extends ScNamedTrait[FormIte
         addNoStr( "optionDataSource", dataSource.id )
     }
 
+    def titleOrientation( or : TitleOrientation ) = add("titleOrientation", or.toString)
+
+    def width( w : String ): FormItem  = add( "width", w )
+
+    def height( h : String ): FormItem  = add( "height", h )
+
+    def width( w : Int ): FormItem = width( w.toString )
+
+    def height( h : Int ): FormItem  = height( h.toString )
+
+    def valueMap( vals : List[String] ) = add("valueMap", vals)
+
+    def valueMapNoString( vals : List[String] ) = addNoStr( "valueMap", vals)
 
     /************************************************************************/
     /********** functions  ******************************/

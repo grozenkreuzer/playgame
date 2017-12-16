@@ -2,6 +2,10 @@ package sc.core
 
 object isc {
 
+    type RecordsData = List[Map[String, String]]
+
+    type RPCParams = Map[String, String]
+
     sealed trait QuotedOrNotString {
         override def toString : String =
             this match {

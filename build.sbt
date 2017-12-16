@@ -11,7 +11,7 @@ resolvers           +=  InfoCryptNexusRepo
 lazy val root = (project in file(".")).enablePlugins(PlayScala)
 
 libraryDependencies += guice
-//libraryDependencies += "com.smart" % "smartclient" % "11.0.0.1-full"
+libraryDependencies += "com.smart" % "smartclient" % "11.0.0.1-full"
 libraryDependencies += "org.scalatestplus.play" %% "scalatestplus-play" % "3.1.1" % "test"
 
 // https://mvnrepository.com/artifact/com.thoughtworks.xstream/xstream

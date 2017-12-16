@@ -1,6 +1,7 @@
 package sc
 
 import sc.core.ScObjectWithId
+import sc.core.StaticObjects.Align.Align
 
 trait LayOutTrait[T] extends ScObjectWithId[T] {
 
@@ -23,7 +24,22 @@ trait LayOutTrait[T] extends ScObjectWithId[T] {
 
     def relativePosition = { add( "position", "relative" ) }
 
-    def defaultLayoutAlign( align : String ) = add("defaultLayoutAlign", align)
+    def defaultLayoutAlign( align : Align ):T = defaultLayoutAlign( align.toString )
+
+    def defaultLayoutAlign( align : String ):T = add("defaultLayoutAlign", align)
+
+    def membersMargin( int : Int ) = addNoStr( "membersMargin", int )
+
+    def layoutMargin( int : Int ) = addNoStr( "layoutMargin", int )
+
+    def layoutBottomMargin ( int : Int ) = addNoStr( "layoutBottomMargin", int )
+
+    def layoutLeftMargin ( int : Int ) = addNoStr( "layoutLeftMargin", int )
+
+    def layoutRightMargin ( int : Int ) = addNoStr( "layoutRightMargin", int )
+
+    def layoutTopMargin  ( int : Int ) = addNoStr( "layoutTopMargin", int )
+
 
 
 

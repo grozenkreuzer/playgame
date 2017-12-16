@@ -31,7 +31,11 @@ trait ScParts[EndType]{
           add( name, values, isString )
 
       this
-  }
+    }
+
+    private def withQuotes( value : String, withQuotes : Boolean, dubleQuotes : Boolean = true ) = {
+        if (withQuotes) "\"" + value + "\"" else value
+    }
 
     def add( name : String, values : List[Any], isString : Boolean = false ) : EndType = {
 
@@ -42,7 +46,7 @@ trait ScParts[EndType]{
                 before( vList.mkString( _newLine ) )
                 vList.map( _.id ).mkString( "," )
 
-            } else values.map( _2space + _).mkString( _newLine , "," + _newLine, _newLine  )
+            } else values.map( v => _2space + withQuotes( v.toString, isString) ).mkString( _newLine , "," + _newLine, _newLine  )
 
 
       add( noStrProp( name, toArray( prop ) ) )
@@ -70,7 +74,7 @@ trait ScParts[EndType]{
     private def noStrProp( name: String, value : String ) : String = prop( name, value, false )
 
     private def prop( name: String, some : String, isString : Boolean  ) = {
-        val value = if( isString ) "\"" + some + "\"" else some
+        val value = withQuotes( some, isString )
         s"$name:$value"
     }
 
