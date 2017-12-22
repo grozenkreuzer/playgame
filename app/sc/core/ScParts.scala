@@ -4,7 +4,7 @@ import scala.collection.mutable.ArrayBuffer
 
 trait ScParts[EndType]{
 
-  self : EndType =>
+    self : EndType =>
 
 
     /********** init   ******************************/
@@ -16,10 +16,12 @@ trait ScParts[EndType]{
     /********** add props methods ******************************/
     def add( name : String, value : String ) : EndType = add( name, value,  true )
 
+    def add( name : String, value : Props ) : EndType = addNoStr( name, value.toString )
+
     def add( name : String, value : ScObjectWithId[_] ) : EndType = {
-      before( value.toString )
-      addNoStr( name, value.id)
-  }
+        before( value.toString )
+        addNoStr( name, value.id)
+    }
 
     def addNoStr( name : String, value : Any ) : EndType = add( name, value.toString, false )
 
@@ -27,10 +29,10 @@ trait ScParts[EndType]{
 
     def addNonEmpty ( name : String, values : List[Any], isString : Boolean = false ) : EndType = {
 
-      if( values.nonEmpty )
-          add( name, values, isString )
+        if( values.nonEmpty )
+            add( name, values, isString )
 
-      this
+        this
     }
 
     private def withQuotes( value : String, withQuotes : Boolean, dubleQuotes : Boolean = true ) = {
@@ -39,7 +41,7 @@ trait ScParts[EndType]{
 
     def add( name : String, values : List[Any], isString : Boolean = false ) : EndType = {
 
-       val prop =
+        val prop =
             if( values.head.isInstanceOf[ ScObjectWithId[_] ] ){
 
                 val vList : List[ScObjectWithId[_]] = values.asInstanceOf[ List[ScObjectWithId[_]]]
@@ -49,16 +51,17 @@ trait ScParts[EndType]{
             } else values.map( v => _2space + withQuotes( v.toString, isString) ).mkString( _newLine , "," + _newLine, _newLine  )
 
 
-      add( noStrProp( name, toArray( prop ) ) )
-      
-  }
+        add( noStrProp( name, toArray( prop ) ) )
+
+    }
 
     def add( name : String, strValue : String, isString : Boolean ) : EndType = {
-      if (isString) add(strProp(name, strValue))
-      else add(noStrProp(name, strValue))
-  }
+        if (isString) add(strProp(name, strValue))
+        else add(noStrProp(name, strValue))
+    }
 
     def add( str : String ) : EndType = { addPart(  str ); self }
+
 
 
     /********** build before string ******************************/
@@ -107,10 +110,10 @@ trait ScParts[EndType]{
         (
             if( !printBefore || beforeScript.isEmpty ) ""
             else  beforeScript.mkString
-        ) +
-        startString + _newLine +
-        getAllPartString + _newLine +
-        endString
+            ) +
+            startString + _newLine +
+            getAllPartString + _newLine +
+            endString
     }
 
 

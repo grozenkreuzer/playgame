@@ -1,8 +1,9 @@
 package sc
 
+import sc.core.StaticObjects.Align.Align
 import sc.core.StaticObjects.FormItemType.FormItemType
 import sc.core.StaticObjects.TitleOrientation.TitleOrientation
-import sc.core.{JsFunctionNamed, ScNamedTrait, ScObjectWithId}
+import sc.core.{JsFunctionNamed, Props, ScNamedTrait, ScObjectWithId}
 
 case class DynamicForm( id : String, fields: List[FormItem] ) extends ScObjectWithId[DynamicForm]  {
 
@@ -33,6 +34,14 @@ case class DynamicForm( id : String, fields: List[FormItem] ) extends ScObjectWi
 
     def titleOrientation( or : TitleOrientation ) = add("titleOrientation", or.toString)
 
+    def values( vals : Props ) = addNoStr( "values", vals )
+
+    def canSubmit = addNoStr( "canSubmit", true )
+
+    def action( url : String ) = add( "action", url )
+
+    def method( httpMethod : HTTPMethod ) = add( "method ", httpMethod.toString )
+
 }
 
 
@@ -44,7 +53,9 @@ case class FormItem( name : String, title: String ) extends ScNamedTrait[FormIte
 
     override def printBefore = false
 
-    add( "title", title )
+    if( title.nonEmpty )
+        add( "title", title )
+    else showTitle( false )
 
 
     /************************************************************************/
@@ -89,9 +100,15 @@ case class FormItem( name : String, title: String ) extends ScNamedTrait[FormIte
 
     def height( h : Int ): FormItem  = height( h.toString )
 
-    def valueMap( vals : List[String] ) = add("valueMap", vals)
+    def valueMap( vals : Map[String,String] ) = add("valueMap", Props(vals))
+
+    def valueMap( vals : List[String] ) = add("valueMap", vals, true)
 
     def valueMapNoString( vals : List[String] ) = addNoStr( "valueMap", vals)
+
+    def vAlign( align: Align ) = add( "vAlign", align.toString )
+
+    def align( align: Align ) = add( "align", align.toString )
 
     /************************************************************************/
     /********** functions  ******************************/

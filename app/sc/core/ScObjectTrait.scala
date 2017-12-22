@@ -37,6 +37,8 @@ trait ScObjectTrait[T] extends ScParts[T] {
 
     def height( h : String ) = add( "height", h )
 
+    def relativePosition = { add( "position", "relative" ) }
+
     /***************************************************************************/
 
 

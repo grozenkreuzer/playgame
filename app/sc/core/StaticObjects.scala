@@ -17,6 +17,7 @@ object StaticObjects {
         val header      = Value("header")
         val spacer      = Value("spacer")
         val textArea    = Value("textArea")
+        val radioGroup  = Value("radioGroup")
 
     }
 
@@ -61,6 +62,13 @@ object StaticObjects {
         val Simplicity  = Value("Simplicity")
         val SmartClient = Value("SmartClient")
         val TreeFrog    = Value("TreeFrog")
+    }
+
+    object HTTPMethod extends Enumeration{
+        type HTTPMethod = Value
+
+        val POST        = Value("POST")
+        val GET         = Value("GET")
     }
 
 }
